@@ -1,8 +1,14 @@
 def evaluar(dividendo, divisor):
-    # TODO: Coloca aquí el código del ejercicio 3: Division
     cociente = 0
     residuo = 0
-    respuesta = "La división es exacta. \n" \
+    exacta=""
+    residuo=dividendo%divisor
+    cociente=int(dividendo/divisor)
+    if (residuo==0):
+        exacta="es"
+    else:
+        exacta="no es"
+    respuesta = "La división " + exacta + " exacta. \n" \
             "Cociente: " + str(cociente) + "\n" \
             "Residuo: " + str(residuo)
     return respuesta
