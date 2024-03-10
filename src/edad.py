@@ -1,6 +1,11 @@
+from datetime import datetime
 def evaluar(dia, mes, anno):
-    # TODO: Coloca aquí el código del ejercicio 6: Edad
-    return "";
+    fecha_actual = datetime.now()
+    fecha_nacimiento = datetime(anno, mes, dia)
+    diferencia = fecha_actual - fecha_nacimiento
+    edad = diferencia.days // 365
+    respuesta="Usted tiene ", edad, " años"
+    return respuesta;
 
 if __name__ == '__main__':
     print("Ingrese su fecha de nacimiento")
